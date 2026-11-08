@@ -42,7 +42,7 @@ class UserResource extends Resource
         ];
     }
 
-    public static function getAuthorizationResponse(UnitEnum|string$action,?Model $record=null):Response
+    public static function getAuthorizationResponse(UnitEnum|string $action,?Model $record=null):Response
     {
      if(auth()->user()->isAdmin()){
         return Response::allow();
